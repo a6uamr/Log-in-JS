@@ -3,7 +3,7 @@
   <head>
     <script>
       const U=JSON.parse(localStorage.getItem('U'))||[0];
-      if (!U[0]) location.replace('index.html');
+      if (!U[0]) location.replace('./');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
@@ -21,7 +21,7 @@
       document.querySelector('h2').textContent=`Hello, ${U[0]}!`;
       document.querySelector('button').addEventListener('click',()=>{
         U[0]=0; localStorage.setItem('U',JSON.stringify(U));
-        location.replace('index.html');});
+        location.replace('./');});
     </script>
   </body>
 </html>
