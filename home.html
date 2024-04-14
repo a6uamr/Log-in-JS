@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      const U=JSON.parse(localStorage.getItem('U'))||[0];
+      if (!U[0]) location.replace('index.html');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Log in (plain JavaScript)</title>
+    <link rel="icon" href="user.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav>
+      <h1>Smart Log in</h1>
+      <button type="button">Log out</button>
+    </nav>
+    <h2>Hello, Name!</h2>
+    <script>
+      document.querySelector('h2').textContent=`Hello, ${U[0]}!`;
+      document.querySelector('button').addEventListener('click',()=>{
+        U[0]=0; localStorage.setItem('U',JSON.stringify(U));
+        location.replace('index.html');});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Montserrat&display=swap');
+@font-face {font-family: s; src: url(s.woff2);}
+body {color: #212529; background: #f0f2f5; font-family: Montserrat, sans-serif;
+  min-height: calc(100dvh - 1em); display: flex; flex-flow: wrap;
+  justify-content: center; align-items: start;}
+form, nav, h2 {box-shadow: 0 .125rem .25rem #0000001a, 0 .5rem 1rem #0000001a;}
+form, h2 {text-align: center; width: 22.75rem; padding-inline: 1rem;
+  border: .0625rem solid #dddfe2;border-radius: .5rem;}
+form {background: #fff; margin: auto;}
+h1, .b, a, nav>button, h2 {font-family: 'Alegreya Sans SC', sans-serif;}
+h1, a, nav>button, h2 {color: #1877f2;}
+.dm {font-size: 1.1em; line-height: 1.5; max-width: min(25em,calc(100% - 3.703em));
+  overflow: visible; border: 0; border-radius: .375em;}
+.dm button {background: 0; padding: 0; border: 0; outline: 0;
+  position: absolute; top: -.5em; right: -.5em;}
+.dm button::before {content: '\f057'; font-family: s; transition: .15s;}
+.dm button:is(:hover,:active)::before {color: #e03131;}
+input, p {font-size: 1.0625em;}
+.i {width: 100%; padding: .8235em .9412em; border: .059em solid #dee2e6;
+  box-sizing: border-box; border-radius: .353em; margin-bottom: .706em;}
+.i:focus {border-color: #ced4da; outline: 0;}
+:focus::placeholder {color: #bec3c9;}
+input, button {font-family: inherit;}
+button {font-size: 1em;}
+button:enabled {cursor: pointer;}
+.b {color: #fff; background: #1877f2; line-height: 1.5; width: 100%;
+  padding: .375em .75em; border: .0625em solid #0000;
+  border-radius: .375em; transition: .15s, outline 0s;}
+.b:focus-visible {outline: .0625em solid #3184fd;}
+.b:enabled:hover {background: #166fe5;}
+.b:enabled:active {background: #0a53be;}
+.b, a, nav>h1, nav>button {font-weight: 500; font-size: 1.333rem;}
+a, button {-webkit-tap-highlight-color: #0000;}
+a {text-decoration: none; white-space: nowrap;}
+:is(a,nav>button):focus-visible {outline: .125em solid;}
+
+nav {padding: 1.25em; width: 100%; border-radius: .5em; display: flex;
+  justify-content: space-between;}
+@media (width>575px) {nav {padding-inline: 3em;}}
+nav>h1 {color: #ed254e; text-transform: uppercase; margin-block: 0;}
+nav>button {background: 0; padding: 0; border: 0;}
+h2 {font-size: 2em; padding-block: .65em;}
