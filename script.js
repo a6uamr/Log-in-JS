@@ -1,4 +1,8 @@
-const I=document.querySelectorAll('.i'), dm=document.querySelector('.dm');
+const I=document.querySelectorAll('.i'), tp=document.querySelector('.tp'),
+  dm=document.querySelector('.dm');
+tp.addEventListener('click',()=>{if (tp.previousElementSibling.type=='password')
+    {tp.previousElementSibling.type='text'; tp.classList.add('tt');}
+  else {tp.previousElementSibling.type='password'; tp.classList.remove('tt');}});
 function w(m) {dm.innerHTML=m+'<button type="button"></button>';
   dm.lastChild.addEventListener('click',()=>dm.close()); dm.showModal();}
 document.forms[0].addEventListener('submit',e=>{e.preventDefault();

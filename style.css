@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@500;700&family=Montserrat&display=swap');
+@font-face {font-family: r; src: url(r.woff2);}
 @font-face {font-family: s; src: url(s.woff2);}
 body {color: #212529; background: #f0f2f5; font-family: Montserrat, sans-serif;
   min-height: calc(100dvh - 1em); display: flex; flex-flow: wrap;
@@ -15,12 +16,20 @@ h1, a, nav>button, h2 {color: #1877f2;}
   position: absolute; top: -.5em; right: -.5em;}
 .dm button::before {content: '\f057'; font-family: s; transition: .15s;}
 .dm button:is(:hover,:active)::before {color: #e03131;}
-input, p {font-size: 1.0625em;}
+input, div:has(>.tp), p {font-size: 1.0625em;}
 .i {width: 100%; padding: .8235em .9412em; border: .059em solid #dee2e6;
   box-sizing: border-box; border-radius: .353em; margin-bottom: .706em;}
 .i:focus {border-color: #ced4da; outline: 0;}
 :focus::placeholder {color: #bec3c9;}
 input, button {font-family: inherit;}
+div:has(>.tp) {margin-bottom: .706em; position: relative;}
+.i:has(+.tp) {font-size: 1em; margin-bottom: 0;}
+.tp {background: 0; padding: .3em; border: 0;
+  position: absolute; top: 50%; right: .7em; translate: 0 -50%;}
+.tp:focus-visible {outline: .0625em solid; border-radius: .25em;}
+.tp::before {content: '\f070'; font-family: r;
+  width: 1.25em; display: inline-block;}
+.tt::before {content: '\f06e';}
 button {font-size: 1em;}
 button:enabled {cursor: pointer;}
 .b {color: #fff; background: #1877f2; line-height: 1.5; width: 100%;
